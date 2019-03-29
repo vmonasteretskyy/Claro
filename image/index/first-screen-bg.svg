@@ -1,0 +1,11 @@
+<svg viewbox="0 0 800 400" class="svg">
+    <path id="curve" fill="url(#paint0_linear)" d="M 800 400 Q 400 400 0 400 L 0 0 L 800 0 L 800 400 Z">
+    </path>
+    <defs>
+        <linearGradient id="paint0_linear" x1="652" y1="441.804" x2="995.706" y2="1076.6"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3BB9FF" />
+            <stop offset="1" stop-color="#77CEFE" />
+        </linearGradient>
+    </defs>
+</svg>

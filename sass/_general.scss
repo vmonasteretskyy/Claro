@@ -1,0 +1,141 @@
+//font family
+$font-family: 'Lato',sans-serif;
+$second-fond: 'Poppins',sans-serif;
+
+//color 
+$color-text: #7C7C7C;
+$color-title: #0D477C;
+$light-blue: #3BB9FF;
+$light-blue-bg: #87D4FE;
+$white: #fff;
+$light-gray: #F2F3F5;
+$border-solid: #E5E5E5;
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+@mixin transform ($property) {
+    transform: $property;
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+}
+
+@mixin transition ($property) {
+    transition: $property;
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    -o-transition: $property;
+}
+
+@mixin animate ($property) {
+    animation: $property;
+    -webkit-animation: $property;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: $font-family;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    line-height: 1.7rem;
+    font-size: 1rem;
+    color: $color-text;
+    background-color: $white;
+}
+
+img {
+    max-width: 100%;
+}
+
+a:hover {
+    @include transition( .4s ease);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.overflow {
+    overflow: hidden;
+}
+.title-section {
+    font-size: 3.55rem;
+    line-height: 4.7rem;
+    margin-bottom: 3rem;
+    color: $color-title;
+}
+
+%btn {
+    display: inline-block;
+    font-family: $second-fond;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include border-radius(50px);
+}
+%card {
+    background: $white;
+    box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.12);
+    @include border-radius(15px);
+    text-align: center;
+    width: 100%;
+}
+
+.btn-border-white {
+    @extend %btn;
+    padding: 0.6rem 2.8rem;
+    color: $white;
+    border: 2px solid $white;
+    &:hover {
+        background: $white;
+        color: $light-blue;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.btn-blue {
+    @extend %btn;
+    padding: 0.6rem 0;
+    width: 12.5rem;
+    background: $light-blue;
+    color: $white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    &:hover {
+        background: $white;
+        color: $light-blue;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.btn-white {
+    @extend %btn;
+    padding: 0.6rem 0;
+    width: 12.5rem;
+    background: $white;
+    color: $light-blue;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    &:hover {
+        color: $white;
+        background: $light-blue;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+

@@ -1,0 +1,274 @@
+.hero {
+  background: #2980B9;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: rotate(45deg);
+}
+.grid .grid-block {
+  background: #87D4FE;
+  margin: 3px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 24%;
+  width: 0.75rem;
+  height: 3.65rem;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+    &:nth-child(2) {
+        left: 26%;
+    }
+    &:nth-child(3) {
+        left: 29%;
+    }
+    &:nth-child(4) {
+        left: 30%;
+    }
+    &:nth-child(5) {
+        left: 31.5%;
+    }
+    &:nth-child(6) {
+        left: 36%;
+    }
+    &:nth-child(7) {
+        left: 40%;
+    }
+    &:nth-child(8) {
+        left: 51%;
+    }
+    &:nth-child(9) {
+        left: 55%;
+    }
+    &:nth-child(10) {
+        left: 59%;
+    }
+    &:nth-child(11) {
+        left: 60%;
+    }
+    &:nth-child(12) {
+        left: 63%;
+    }
+    &:nth-child(13) {
+        left: 66%;
+    }
+    &:nth-child(14) {
+        left: 67%;
+    }
+    &:nth-child(15) {
+        left: 70%;
+    }
+    &:nth-child(16) {
+        left: 85%;
+    }
+}
+@keyframes changewidth {
+  from {
+    top: -150vh;
+  }
+  to {
+    top: 150vh;
+  }
+}
+// .grid .block1 {
+//   left: 2vw;
+//   min-height: 240px;
+//   animation-duration: 19200ms;
+//   animation-delay: 48ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 48;
+//   min-width: 48px;
+//   border-radius: 48px;
+// }
+// .grid .block2 {
+//   left: 4vw;
+//   min-height: 240px;
+//   animation-duration: 19200ms;
+//   animation-delay: 48ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 48;
+//   min-width: 48px;
+//   border-radius: 48px;
+// }
+// .grid .block3 {
+//   left: 6vw;
+//   min-height: 50px;
+//   animation-duration: 4000ms;
+//   animation-delay: 10ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 10;
+//   min-width: 10px;
+//   border-radius: 10px;
+// }
+// .grid .block4 {
+//   left: 8vw;
+//   min-height: 10px;
+//   animation-duration: 800ms;
+//   animation-delay: 2ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 2;
+//   min-width: 2px;
+//   border-radius: 2px;
+// }
+// .grid .block5 {
+//   left: 10vw;
+//   min-height: 200px;
+//   animation-duration: 16000ms;
+//   animation-delay: 40ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 40;
+//   min-width: 40px;
+//   border-radius: 40px;
+// }
+// .grid .block6 {
+//   left: 12vw;
+//   min-height: 185px;
+//   animation-duration: 14800ms;
+//   animation-delay: 37ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 37;
+//   min-width: 37px;
+//   border-radius: 37px;
+// }
+// .grid .block7 {
+//   left: 14vw;
+//   min-height: 25px;
+//   animation-duration: 2000ms;
+//   animation-delay: 5ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 5;
+//   min-width: 5px;
+//   border-radius: 5px;
+// }
+// .grid .block8 {
+//   left: 16vw;
+//   min-height: 110px;
+//   animation-duration: 8800ms;
+//   animation-delay: 22ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 22;
+//   min-width: 22px;
+//   border-radius: 22px;
+// }
+// .grid .block9 {
+//   left: 18vw;
+//   min-height: 135px;
+//   animation-duration: 10800ms;
+//   animation-delay: 27ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 27;
+//   min-width: 27px;
+//   border-radius: 27px;
+// }
+// .grid .block10 {
+//   left: 20vw;
+//   min-height: 190px;
+//   animation-duration: 15200ms;
+//   animation-delay: 38ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 38;
+//   min-width: 38px;
+//   border-radius: 38px;
+// }
+// .grid .block11 {
+//   left: 22vw;
+//   min-height: 160px;
+//   animation-duration: 12800ms;
+//   animation-delay: 32ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 32;
+//   min-width: 32px;
+//   border-radius: 32px;
+// }
+// .grid .block12 {
+//   left: 24vw;
+//   min-height: 140px;
+//   animation-duration: 11200ms;
+//   animation-delay: 28ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 28;
+//   min-width: 28px;
+//   border-radius: 28px;
+// }
+// .grid .block13 {
+//   left: 26vw;
+//   min-height: 170px;
+//   animation-duration: 13600ms;
+//   animation-delay: 34ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 34;
+//   min-width: 34px;
+//   border-radius: 34px;
+// }
+// .grid .block14 {
+//   left: 28vw;
+//   min-height: 145px;
+//   animation-duration: 11600ms;
+//   animation-delay: 29ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 29;
+//   min-width: 29px;
+//   border-radius: 29px;
+// }
+// .grid .block15 {
+//   left: 30vw;
+//   min-height: 15px;
+//   animation-duration: 1200ms;
+//   animation-delay: 3ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 3;
+//   min-width: 3px;
+//   border-radius: 3px;
+// }
+// .grid .block16 {
+//   left: 32vw;
+//   min-height: 120px;
+//   animation-duration: 9600ms;
+//   animation-delay: 24ms;
+//   animation-name: changewidth;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+//   opacity: 24;
+//   min-width: 24px;
+//   border-radius: 24px;
+// }

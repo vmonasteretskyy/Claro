@@ -1,0 +1,50 @@
+.publishers {
+    background: url(../image/bg-page.svg) no-repeat bottom -13rem right;
+    background-size: 82rem;
+    padding: 4rem 0 3rem;
+    &__card {
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__text {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 88%;
+        p {
+            margin-bottom: 1.5rem;
+        }
+        .box-2 {
+            color: $white;
+            font-size: 1.3rem;
+            line-height: 1.85rem;
+            font-weight: 900;
+            >a {
+                margin-top: 2.65rem;
+            }
+        }
+    }
+}
+
+.card-big {
+    @extend %card;
+    margin-bottom: 4rem;
+    padding: 2.25rem 1.2rem 1rem;
+    min-height: 25.6rem;
+    width: 48.2%;
+    &:nth-of-type(2n) {
+        margin-top: 4rem;
+        margin-bottom: 0;
+    }
+    &__img {
+        width: 6.5rem;
+        margin: 0 auto 2rem;
+    }
+    &__title {
+        font-family: $second-fond;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2.1rem;
+        margin-bottom: 1.5rem;
+    }
+}

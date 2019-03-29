@@ -1,0 +1,594 @@
+@media only screen and (max-width: 1199.8px) {
+    .title-section {
+        font-size: 2.6rem;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .logo {
+        width: 10rem;
+        height: 1.7rem;
+    }
+
+    .header {
+        padding: 1rem 0;
+        font-size: 1rem;
+        line-height: 1.38rem;
+        text-transform: uppercase;
+        z-index: 100;
+
+        &.open {
+            .logo {
+                background: url(../image/logo-white.svg) no-repeat center center / 100% 100%;
+            }
+
+            .group-btn {
+                border: 2px solid $white;
+
+                >a {
+                    color: $white;
+                }
+
+                >span {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    .menu {
+        display: block;
+        // background: url(../image/menu-bg.svg) no-repeat top center / contain;
+        background-color: $white;
+        width: 100%;
+        max-height: 28rem;
+        overflow-y: auto;
+        padding: 2.4rem 1.4rem 1.8rem;
+        &__btn {
+            position: relative;
+            width: 2.4rem;
+            height: 1rem;
+            z-index: 20;
+            &::before,
+            &::after {
+                content: '';
+                width: 100%;
+                height: 4px;
+                background-color: $color-title;
+                @include border-radius(2px);
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                @include transition(.5s);
+            }
+
+            &::before {
+                width: 80%;
+                top: 0;
+                bottom: auto;
+            }
+
+            &.open {
+                &::before,
+                &::after {
+                    width: 100%;
+                    background-color: $white;
+                }
+                &::before {
+                    @include transform(rotate(45deg));
+                    margin-top: 0.4rem;
+                }
+                &::after {
+                    @include transform(rotate(-45deg));
+                    margin-bottom: 0.4rem;
+                }
+            }
+        }
+
+        &__content {
+            flex-direction: column;
+            position: absolute;
+            top: -100%;
+            right: 0;
+            left: 0;
+            text-align: center;
+            @include transform(translateY(-150%));
+            @include transition(transform .5s);
+            &.open {
+                padding-top: 4rem;
+                @include transform(translateY(0));
+                background: linear-gradient(109.85deg, #3BB9FF 1.78%, #77CEFE 98.53%);
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                z-index: 10;
+            }
+        }
+
+        &__items {
+            margin-right: 0;
+            border-top: 1px solid $border-solid;
+            font-weight: 900;
+
+            &:last-child {
+                margin-right: 0;
+                border-bottom: 1px solid $border-solid;
+            }
+
+            &_sub-menu {
+                position: relative;
+                top: 0;
+                background-color: $white;
+                padding: 1rem 0;
+
+                &::before {
+                    content: '';
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    background: url(../icons/arrow-up.svg) no-repeat center center / contain;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    margin-left: -0.8rem;
+                }
+
+                >li {
+                    border: none;
+                    width: 100%;
+                    font-weight: 400;
+
+                    >a {
+                        color: $light-blue-bg;
+                        padding: .8rem 0;
+                    }
+                }
+            }
+
+            >a,
+            >span {
+                color: $light-blue;
+                width: 100%;
+                padding: .75rem 0;
+                display: block;
+
+                &:hover,
+                &.active {
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+
+    .group-btn {
+        width: 290px;
+        margin: 2.8rem 0 1.8rem;
+        justify-content: center;
+        order: -1;
+
+        >a {
+            color: $light-blue;
+        }
+
+        >span {
+            width: 5px;
+            height: 5px;
+            background-color: $light-blue;
+            display: inline-block;
+            @include border-radius(50%);
+            margin: 0 1.3rem;
+        }
+    }
+
+    .white-menu {
+        .menu {
+            &__btn {
+
+                &::before,
+                &::after {
+                    background-color: $white;
+                }
+            }
+
+            &__items {
+
+                >a,
+                span {
+                    color: $light-blue;
+                }
+            }
+        }
+
+        .group-btn {
+            border: 2px solid $white;
+
+            >a {
+                color: $white;
+            }
+
+            >span {
+                background-color: $white;
+            }
+        }
+    }
+
+    .fixed {
+        .menu {
+            &__btn {
+
+                &::before,
+                &::after {
+                    background-color: $color-title;
+                }
+
+                &.open {
+
+                    &::before,
+                    &::after {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .first-screen {
+        background: url(../image/index/bg.svg) no-repeat bottom center / cover;
+
+        &__title {
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+
+            &::after {
+                width: 9rem;
+                height: 13rem;
+                position: absolute;
+                top: -2rem;
+                right: 10rem;
+            }
+        }
+    }
+
+    .svg-container {
+        display: none;
+    }
+
+    .section-middle {
+        padding: 7rem 0 2rem;
+        background-position: bottom -12rem left -26rem;
+        background-size: 90rem;
+
+        .group-card {
+            &::before {
+                top: -2rem;
+                left: -1rem;
+                height: 14rem;
+            }
+
+            .col-12 {
+                &:last-child {
+                    margin-top: 3rem;
+                }
+            }
+        }
+
+        .mt-120 {
+            margin-top: 4rem;
+        }
+    }
+
+    .cards {
+        padding: 1.2rem 1rem;
+        margin-bottom: 3rem;
+        &__img {
+          margin: 0 auto 1rem;
+        }
+      }
+
+      .index-question {
+        width: 100%;
+        &_middle {
+          margin: 4rem auto;
+        }
+        &_first {
+          margin-left: 0;
+        }
+      }
+
+      .section-last {
+        padding: 8rem 0 3rem;
+        &::before {
+          background-position: bottom right;
+          background-size: contain;
+        }
+        &::after {
+            width: 9rem;
+            top: 6rem;
+            left: 25.7%;
+        }
+        &__title {
+          margin-bottom: 4rem;
+        }
+        &__btn {
+          margin-left: 4rem;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .group-dots {
+        margin-left: 50%;
+    }
+}
+
+@media only screen and (max-width: 991.8px) {
+    .index-question {    
+        &__title {
+            font-size: 1.1rem;
+            line-height: 1.4rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    .section-last {
+        padding: 4rem 0 3rem;
+        &::after {
+            top: 2rem;
+        }
+        &__title {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 767.8px) {
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        line-height: 1.46rem;
+    }
+
+    .title-section {
+        font-size: 2.33rem;
+        line-height: 3.06rem;
+        margin-bottom: 2.33rem;
+    }
+
+    .first-screen {
+        padding: 6.8rem 0 8rem;
+        &__title {
+            font-size: 2.33rem;
+            line-height: 3.06rem;
+            margin-bottom: 2.33rem;
+            &::after {
+                display: none;
+            }
+        }
+    
+        &__btn {
+            width: 290px;
+            margin-top: 3.3rem;
+        }
+    }
+
+    .section-middle {
+        padding: 2rem 0 4rem; 
+        background-position: center left -21rem;  
+        .group-card { 
+            margin-top: 2rem;           
+            &::before {
+                top: -6rem;
+                left: -1rem;
+                right: 0;
+                height: 100%;
+            }
+        }
+        .mt-120 {
+            margin-top: 3rem;
+        }
+    }
+
+    .index-question {
+        width: 350px;
+        margin: 0 auto;
+        &_middle {
+            margin: 4rem auto;
+        }    
+        &__title {
+            font-size: 1.3rem;
+            line-height: 1.9rem;
+            margin-bottom: 1.3rem;
+        }    
+        &__btn {
+            padding: 0.87rem 0;
+            width: 8.5rem;
+            margin-top: 2.33rem;
+        }
+    }
+    .group-dots {
+        margin-left: 35%;
+    }
+
+    .footer {
+        padding: 1rem 0;
+        &__image {
+            margin-bottom: 1rem;
+            img {
+                height: 6rem;
+            }
+        }
+    }
+
+    .social-link {
+        margin-top: -9.5rem;
+        >span {
+            margin-bottom: 1.4rem;
+        }
+        >img {
+            width: 2rem;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+    .menu {
+        background: url(../image/menu-bg.svg) no-repeat top center / contain;
+        background-color: $white;
+    }
+    .first-screen {
+        &__btn {
+            margin: 3.3rem auto 0;
+        }
+    }
+
+    .section-middle { 
+        background-size: 80rem;
+        .group-card { 
+            margin-top: 2rem;           
+            &::before {
+                background: url(../image/index/bg-section-middle-small-mob.svg) no-repeat center right;
+                background-size: contain;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+            .col-12 {
+                &:last-child {
+                    margin-top: 0;
+                }
+            }
+        }
+        .mt-120 {
+            margin-top: 3rem;
+        }
+    }
+
+    .cards {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        &__img {
+            width: 4.6rem;
+            margin: 0 1.7rem 0 0;
+        }
+    }
+
+    .index-question {
+        width: 290px;
+    }
+
+    .section-last {
+        padding: 5.4rem 0 3.06rem;
+        &::before {
+           display: none;
+        }
+    
+        &::after {
+            width: 10.6rem;
+            top: 8.2rem;
+            left: 30%;
+        }
+    
+        &__title {
+            margin-bottom: 4rem;
+        }
+    
+        &__btn {
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .group-dots {
+        margin-left: 0;
+    }
+    .footer {
+        font-size: 0.8rem;
+    }
+
+    .social-link {
+        margin-top: 0;
+        >span {
+            display: none;
+            &:first-child {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-height: 570px) {
+    .menu {
+        overflow-y: auto;
+        &__content {
+            &.open {
+                padding-top: 3rem;
+                height: 100vh;
+            }
+        }
+    }
+
+    .first-screen {
+        padding: 6.8rem 0 8rem;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 1320px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    html {
+        font-size: 16px;
+    }
+
+    .section-middle {
+        background-position: bottom -12rem left -28.4rem;
+        background-size: 105rem;
+    }
+}
+
+@media only screen and (min-width: 1480px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    html {
+        font-size: 18px;
+    }
+
+    .section-middle {
+        background-position: bottom -12rem left -28.4rem;
+        background-size: 105rem;
+    }
+}
+
+@media only screen and (min-width: 1701px) {
+    .container {
+        max-width: 1680px;
+    }
+
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .first-screen {
+        background: url(../image/index/bg.svg) no-repeat bottom center / cover;
+    }
+    .svg-container {
+        display: none;
+    }
+}

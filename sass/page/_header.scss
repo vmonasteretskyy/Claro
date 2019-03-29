@@ -1,0 +1,147 @@
+.header {
+    padding: 1.85rem 0;
+    font-size: 0.8rem;
+    line-height: 1.15rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    width: 14rem;
+    height: 2.5rem;
+    display: block;
+    background: url(../image/logo-blue.svg) no-repeat center center / 100% 100%;
+    position: relative;
+    z-index: 20;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+    &__items {
+        margin-right: 1.75rem;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+        &_sub-menu {
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 5.5rem;
+            background-color: $color-title;
+            text-align: center;
+            display: none;
+            >li {
+                width: 48%;
+                display: inline-block;
+                >a {
+                    color: $white;
+                    padding: .5rem 0;
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+        >a,
+        >span {
+            color: $color-title;
+            cursor: pointer;
+            &:hover,
+            &.active {
+                color: $light-blue;
+            }
+        }
+    }
+}
+
+.group-btn {
+    border: 2px solid $light-blue;
+    @include border-radius(40px);
+    padding: 0.7rem 1.1rem;
+    margin-left: 3.5rem;
+    >a {
+        color: $light-blue;
+    }
+    >span {
+        width: 5px;
+        height: 5px;
+        background-color: $light-blue;
+        display: inline-block;
+        @include border-radius(50%); 
+        margin: 0 1.3rem;
+    }
+}
+
+.white-menu {
+    .header {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        box-shadow: none;
+    }
+    .logo {
+        background: url(../image/logo-white.svg) no-repeat center center / 100% 100%;
+    }
+    
+    .menu {
+        &__items {
+            >a,
+            span {
+                color: $white;
+            }
+        }
+    }
+    
+    .group-btn {
+        border: 2px solid $white;
+        >a {
+            color: $white;
+        }
+        >span {
+            background-color: $white;
+        }
+    }
+}
+
+.fixed {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    background-color: $white;
+    @include transition (0.5s);
+    @include transform(translate(0, -100%));
+    .logo {
+        background: url(../image/logo-blue.svg) no-repeat center center / 100% 100%;
+    }
+    
+    .menu {
+        &__items {
+            >a,
+            span {
+                color: $color-title;
+            }
+        }
+    }
+    
+    .group-btn {
+        border: 2px solid $light-blue;
+        >a {
+            color: $light-blue;
+        }
+        >span {
+            background-color: $light-blue;
+        }
+    }
+}
+
+.visible{
+    @include transform(translate(0, 0));
+}
