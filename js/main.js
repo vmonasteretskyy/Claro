@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-  //fixed menu
+  // fixed menu
   let heightHeader = $('.header').height();
-  $(window).scroll(() => {
+  $(window).scroll(function () {
     let currentPosition = $(window).scrollTop();
 
     if (currentPosition >= heightHeader) {

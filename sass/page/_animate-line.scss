@@ -1,0 +1,138 @@
+.animate-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include transform(rotate(45deg));
+    z-index: -1;
+    &__item {
+        background: #87D4FE;
+        display: inline-block;
+        position: absolute;
+        top: -50%;
+        left: 22%;
+        width: 0.75rem;
+        height: 3.65rem;
+        @include border-radius(50px);
+        animation-name: moveLine;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        &:nth-child(7),
+        &:nth-child(10),
+        &:nth-child(12),
+        &:nth-child(3) {
+            height: 8.15rem;
+            width: 1.75rem;
+        }
+        &:nth-child(9)
+        &:nth-child(11),
+        &:nth-child(14) {
+            width: 2.5rem;
+            height: 8.7rem;
+        }
+        &:nth-child(1) {
+            animation-duration: 9800ms;
+            animation-delay: 27ms;
+        }
+        &:nth-child(2) {
+            left: 26%;
+            animation-duration: 4200ms;
+            animation-delay: 3ms;
+        }
+        &:nth-child(3) {
+            left: 28%;
+            animation-duration: 15000ms;
+            animation-delay: 3ms;
+            opacity: 0.5;
+        }
+        &:nth-child(4) {
+            left: 43%;
+            animation-duration: 11600ms;
+            animation-delay: 29ms;
+            opacity: 0.4;
+        }
+        &:nth-child(5) {
+            left: 31.5%;
+            animation-duration: 5000ms;
+            animation-delay: 5ms;
+        }
+        &:nth-child(6) {
+            left: 36%;
+            animation-duration: 11200ms;
+            animation-delay: 2ms;
+            opacity: 0.6;
+        }
+        &:nth-child(7) {
+            left: 40%;
+            animation-duration: 6000ms;
+            animation-delay: 2ms;
+        }
+        &:nth-child(8) {
+            left: 51%;
+            animation-duration: 5000ms;
+            animation-delay: 34ms;
+            opacity: 0.7;
+        }
+        &:nth-child(9) {
+            left: 55%;
+            animation-duration: 12800ms;
+            animation-delay: 32ms;
+        }
+        &:nth-child(10) {
+            left: 52%;
+            animation-duration: 7000ms;
+            animation-delay: 48ms;
+        }
+        &:nth-child(11) {
+            left: 59%;
+            animation-duration: 9600ms;
+            animation-delay: 24ms;
+        }
+        &:nth-child(12) {
+            left: 63%;
+            animation-duration: 4000ms;
+            animation-delay: 10ms;
+            opacity: 0.3;
+        }
+        &:nth-child(13) {
+            left: 66%;
+            animation-duration: 11200ms;
+            animation-delay: 38ms;
+        }
+        &:nth-child(14) {
+            left: 75%;
+            animation-duration: 10200ms;
+            animation-delay: 48ms;
+        }
+        &:nth-child(15) {
+            left: 70%;
+            animation-duration: 8800ms;
+            animation-delay: 22ms;
+        }
+        &:nth-child(16) {
+            left: 85%;
+            animation-duration: 12000ms;
+            animation-delay: 40ms;
+        }
+        &:nth-child(17) {
+            left: 88%;
+            animation-duration: 9000ms;
+            animation-delay: 22ms;
+        }
+        &:nth-child(18) {
+            left: 90%;
+            animation-duration: 10000ms;
+        }
+    }
+}
+
+@keyframes moveLine {
+    from {
+        top: -200vh;
+    }
+
+    to {
+        top: 200vh;
+    }
+}

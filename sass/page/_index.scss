@@ -1,16 +1,17 @@
 .first-screen {
     height: 100vh;
-    // background: url(../image/index/bg.svg) no-repeat bottom center / cover;
+    width: 100vw;
+    padding-top: 5.5rem;
     color: $white;
     overflow: hidden;
-
+    position: relative;
+    z-index: 1;
     &__title {
         font-size: 4rem;
         line-height: 5.3rem;
         margin-bottom: 2.85rem;
         position: relative;
         z-index: 1;
-
         &::after {
             content: '';
             background-color: $light-blue-bg;
@@ -22,7 +23,6 @@
             z-index: -1;
         }
     }
-
     &__btn {
         margin-top: 2.9rem;
     }

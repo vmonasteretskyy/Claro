@@ -1,8 +1,10 @@
 .header {
-    padding: 1.85rem 0;
+    height: 6.4rem;
     font-size: 0.8rem;
     line-height: 1.15rem;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 100;
 }
 
 .logo {
@@ -65,13 +67,14 @@
     margin-left: 3.5rem;
     >a {
         color: $light-blue;
+        text-transform: uppercase;
     }
     >span {
         width: 5px;
         height: 5px;
         background-color: $light-blue;
         display: inline-block;
-        @include border-radius(50%); 
+        @include border-radius(50%);
         margin: 0 1.3rem;
     }
 }
@@ -87,16 +90,17 @@
     .logo {
         background: url(../image/logo-white.svg) no-repeat center center / 100% 100%;
     }
-    
     .menu {
         &__items {
             >a,
             span {
                 color: $white;
+                &:hover {
+                    color: $color-title;
+                }
             }
         }
     }
-    
     .group-btn {
         border: 2px solid $white;
         >a {
@@ -113,24 +117,26 @@
     left: 0;
     right: 0;
     top: 0;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05) !important;
     z-index: 100;
     background-color: $white;
     @include transition (0.5s);
-    @include transform(translate(0, -100%));
+    @include transform(translate(0, -120%));
     .logo {
         background: url(../image/logo-blue.svg) no-repeat center center / 100% 100%;
     }
-    
     .menu {
         &__items {
             >a,
             span {
                 color: $color-title;
+                &:hover,
+                &.active {
+                    color: $light-blue;
+                }
             }
         }
     }
-    
     .group-btn {
         border: 2px solid $light-blue;
         >a {
@@ -142,6 +148,6 @@
     }
 }
 
-.visible{
+.visible {
     @include transform(translate(0, 0));
 }
