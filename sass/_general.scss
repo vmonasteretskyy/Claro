@@ -10,6 +10,8 @@ $light-blue-bg: #87D4FE;
 $white: #fff;
 $light-gray: #F2F3F5;
 $border-solid: #E5E5E5;
+$color-label: #B1B1B1;
+$color-error: #FF2C9C;
 
 @mixin border-radius($radius) {
     border-radius: $radius;

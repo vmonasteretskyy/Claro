@@ -51,6 +51,25 @@ $(document).ready(function () {
     $(this).closest('li').siblings('li').find('article').slideUp();
   });
 
+  //style input
+  let inputsStyleLabel = $(".form-group input, .form-group textarea");
+
+  inputsStyleLabel.on('focus', function () {
+    let self = $(this);
+    self.prev().addClass('active');
+  });
+
+  inputsStyleLabel.on('focusout', function () {
+        let self = $(this);
+    self.val() == "" ? self.prev().removeClass('active') : "";
+  });
+
+  // $('.form-btn').click(function(){
+  //   if(inputsStyleLabel.val() == "") {
+  //     $('.form-group').addClass('error');
+  //   }
+  // });
+
 
 
   (function () {

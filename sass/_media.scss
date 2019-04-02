@@ -374,6 +374,13 @@
             }
         }
     }
+
+    .contact-us {
+        background-size: 60rem;
+        &__form {
+            padding: 3rem 5rem 3rem;
+        }
+    }
 }
 
 @media only screen and (max-width: 991.8px) {
@@ -422,6 +429,16 @@
 
     .card-big {
         min-height: 21rem;
+    }
+
+    .contact-us {
+        background-size: 44rem;
+        &__form {
+            padding: 2rem 2rem 2.5rem;
+            >p {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -558,6 +575,34 @@
         }
     }
 
+    .contact-us {
+        padding: 2rem 0 4rem;
+        background: url(../image/bg-contact-us-320.svg) no-repeat top right;
+        background-size: 30rem;
+        p {
+            margin-bottom: 1rem;
+        }
+        &__form {
+            margin-top: 3rem;
+            padding: 1.7rem 1rem 3rem;
+            h4 {
+                font-size: 1rem;
+                margin-bottom: 1.3rem;
+            }
+            >p {
+                width: 90%;
+                margin: 0 auto 2rem;
+            }
+        }
+    }
+    
+    .form-group {
+        input,
+        textarea {
+            height: 2.1rem;
+        }
+    }
+    
 }
 
 @media only screen and (max-width: 575px) {
@@ -740,9 +785,9 @@
     }
 
     .FAQ {
-        padding: 2rem 0 4rem;
+        padding-bottom: 4rem;
         &__title {
-            margin-bottom: 2.2rem;
+            margin: 2.2rem 0;
         }
     }
     
@@ -771,12 +816,21 @@
             }
         }
     }
+
+    .contact-us {
+        background-position: top 5rem right;
+        background-size: 27rem;
+    }
 }
 
 @media only screen and (max-width: 375px) {
     .about-us {
         background-position: top 15rem right -7rem;
         background-size: 24rem;
+    }
+    .contact-us {
+        background-position: top 9rem right;
+        background-size: 22rem;
     }
 }
 

@@ -1,0 +1,95 @@
+.contact-us {
+    padding: 3.9rem 0 5.6rem;
+    background: url(../image/bg-contact-us.svg) no-repeat top right;
+    background-size: 66rem;
+    p {
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+    &__form {
+        @extend %card;
+        padding: 3.25rem 7rem 3.5rem;
+        h4 {
+            font-family: $second-fond;
+            font-weight: 700;
+            font-size: 1.3rem;
+            line-height: normal;
+            color: $color-title;
+            margin-bottom: 1.75rem;
+        }
+        >p {
+            width: 80%;
+            margin: 0 auto 2.5rem;
+            font-weight: 400;
+        }
+    }
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    position: relative;
+    >span {
+        position: absolute;
+        top: 0;
+        left: 4rem;
+        color: $color-error;
+        font-size: 0.75rem;
+        display: none;
+        @include transform(translateY(-100%));
+    }
+    &.error {
+        input {
+            border-bottom: 1px solid $color-error;
+        }
+        >span {
+            display: block;
+        }
+        label {
+            @include transform(translateY(-100%));
+            font-size: 0.75rem;
+        }
+    }
+    input,
+    textarea {
+        height: 2rem;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $border-solid;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $color-text;
+        background: transparent;
+        @include border-radius(0);
+        box-shadow: inset none;
+        &:focus {
+            outline: none;
+        }
+    }
+    textarea {
+        resize: none;
+        height: auto;
+        min-height: 2rem;
+    }
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        color: $color-label;
+        font-size: 1rem;
+        @include transition(0.4s);
+        margin-bottom: 0;
+        &.active {
+            @include transform(translateY(-100%));
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.recaptcha {
+    text-align: left;
+    width: 100%;
+    margin: -1rem 0 2.5rem;
+}
