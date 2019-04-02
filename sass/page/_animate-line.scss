@@ -7,7 +7,7 @@
     @include transform(rotate(45deg));
     z-index: -1;
     &__item {
-        background: #87D4FE;
+        background: $light-blue-bg;
         display: inline-block;
         position: absolute;
         top: -50%;

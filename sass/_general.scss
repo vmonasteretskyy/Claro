@@ -46,6 +46,7 @@ html {
 
 body {
     width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
     font-family: $font-family;
     font-weight: 400;
@@ -54,6 +55,9 @@ body {
     font-size: 1rem;
     color: $color-text;
     background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 img {

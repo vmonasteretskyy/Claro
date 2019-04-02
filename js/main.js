@@ -41,7 +41,14 @@ $(document).ready(function () {
     $('.menu__content').toggleClass('open');
     $('.header').toggleClass('open');    
     $('body').toggleClass('overflow');
-	});
+  });
+  
+  $('.accordion>li>div').click(function () {
+    $(this).toggleClass('open');
+    $(this).next('article').slideToggle();
+    $(this).closest('li').siblings('li').find('.accordion__title').removeClass('open');
+    $(this).closest('li').siblings('li').find('article').slideUp();
+});
 
 
 

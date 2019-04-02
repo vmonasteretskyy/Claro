@@ -43,11 +43,13 @@
         max-height: 28rem;
         overflow-y: auto;
         padding: 2rem 1.4rem 1.8rem;
+
         &__btn {
             position: relative;
             width: 2.4rem;
             height: 1rem;
             z-index: 20;
+
             &::before,
             &::after {
                 content: '';
@@ -68,15 +70,18 @@
             }
 
             &.open {
+
                 &::before,
                 &::after {
                     width: 100%;
                     background-color: $white;
                 }
+
                 &::before {
                     @include transform(rotate(45deg));
                     margin-top: 0.4rem;
                 }
+
                 &::after {
                     @include transform(rotate(-45deg));
                     margin-bottom: 0.4rem;
@@ -92,11 +97,12 @@
             left: 0;
             text-align: center;
             @include transform(translateY(-150%));
-            @include transition(transform .5s);
+            @include transition(.5s);
+
             &.open {
                 padding-top: 3.2rem;
                 @include transform(translateY(0));
-                background: linear-gradient(109.85deg, #3BB9FF 1.78%, #77CEFE 98.53%);
+                background: linear-gradient(110.99deg, #3BB9FF 1.78%, #77CEFE 98.53%);
                 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
                 z-index: 10;
             }
@@ -148,9 +154,8 @@
                 padding: .75rem 0;
                 display: block;
 
-                &:hover,
                 &.active {
-                    color: $light-blue;
+                    color: $color-title;
                 }
             }
         }
@@ -161,9 +166,11 @@
         margin: 2.2rem 0 1.8rem;
         justify-content: center;
         order: -1;
+
         >a {
             color: $light-blue;
         }
+
         >span {
             background-color: $light-blue;
         }
@@ -222,8 +229,9 @@
     }
 
     .first-screen {
-        background: linear-gradient(151.57deg, #3BB9FF 38.82%, #77CEFE 78.91%);
+        background: linear-gradient(110.99deg, #3BB9FF 1.78%, #77CEFE 98.53%);
         padding-top: 4rem;
+
         &__title {
             font-size: 3.5rem;
             line-height: 4.5rem;
@@ -269,42 +277,49 @@
     .cards {
         padding: 1.2rem 1rem;
         margin-bottom: 3rem;
+
         &__img {
-          margin: 0 auto 1rem;
+            margin: 0 auto 1rem;
         }
-      }
+    }
 
-      .index-question {
+    .index-question {
         width: 100%;
-        &_middle {
-          margin: 4rem auto;
-        }
-        &_first {
-          margin-left: 0;
-        }
-      }
 
-      .section-last {
-        padding: 8rem 0 3rem;
-        &::before {
-          background-position: bottom right;
-          background-size: contain;
+        &_middle {
+            margin: 4rem auto;
         }
+
+        &_first {
+            margin-left: 0;
+        }
+    }
+
+    .section-last {
+        padding: 8rem 0 3rem;
+
+        &::before {
+            background-position: bottom right;
+            background-size: contain;
+        }
+
         &::after {
             width: 9rem;
             top: 6rem;
             left: 25.7%;
         }
-        &__title {
-          margin-bottom: 4rem;
-        }
-        &__btn {
-          margin-left: 4rem;
-          margin-bottom: 2rem;
-        }
-      }
 
-      .group-dots {
+        &__title {
+            margin-bottom: 4rem;
+        }
+
+        &__btn {
+            margin-left: 4rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .group-dots {
         margin-left: 50%;
     }
 
@@ -312,34 +327,57 @@
         margin-bottom: 3rem;
         padding: 2rem 1.2rem 1rem;
         min-height: 25.6rem;
+
         &:nth-of-type(2n) {
             margin-top: 3rem;
         }
+
         &__header {
             margin-bottom: 1rem;
         }
+
         &__img {
             width: 6rem;
             margin: 0 auto 1.4rem;
         }
+
         &__title {
             line-height: 1.6rem;
         }
     }
 
     .publishers,
-    .advertisers, 
+    .advertisers,
     .whyClaroAds {
         background-position: bottom -5rem right;
         background-size: 60rem;
+
         &__text {
             height: 95%;
+        }
+    }
+
+    .about-us {
+        background-size: 38rem;
+
+        &__content-card {
+            flex-wrap: wrap;
+        }
+
+        &__card {
+            width: 45%;
+            flex: auto;
+            margin-bottom: 2rem;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
         }
     }
 }
 
 @media only screen and (max-width: 991.8px) {
-    .index-question {    
+    .index-question {
         &__title {
             font-size: 1.1rem;
             line-height: 1.4rem;
@@ -349,9 +387,11 @@
 
     .section-last {
         padding: 4rem 0 3rem;
+
         &::after {
             top: 2rem;
         }
+
         &__title {
             margin-bottom: 2rem;
         }
@@ -363,20 +403,23 @@
         &__text {
             height: auto;
             margin-bottom: 2rem;
+
             p {
                 margin-bottom: 1rem;
             }
+
             &_top {
-                >p{
+                >p {
                     width: 50%;
                 }
             }
+
             &_bottom {
                 display: none;
             }
         }
     }
-    
+
     .card-big {
         min-height: 21rem;
     }
@@ -387,6 +430,7 @@
         font-size: 1rem;
         padding: 1.2rem 0;
     }
+
     html {
         font-size: 15px;
     }
@@ -403,15 +447,17 @@
 
     .first-screen {
         padding: 6.8rem 0 8rem;
+
         &__title {
             font-size: 2.33rem;
             line-height: 3.06rem;
             margin-bottom: 2.33rem;
+
             &::after {
                 display: none;
             }
         }
-    
+
         &__btn {
             width: 290px;
             margin-top: 3.3rem;
@@ -419,10 +465,12 @@
     }
 
     .section-middle {
-        padding: 2rem 0 4rem; 
-        background-position: center left -21rem;  
-        .group-card { 
-            margin-top: 2rem;           
+        padding: 2rem 0 4rem;
+        background-position: center left -21rem;
+
+        .group-card {
+            margin-top: 2rem;
+
             &::before {
                 top: -6rem;
                 left: -1rem;
@@ -430,6 +478,7 @@
                 height: 100%;
             }
         }
+
         .mt-120 {
             margin-top: 3rem;
         }
@@ -438,28 +487,34 @@
     .index-question {
         width: 350px;
         margin: 0 auto;
+
         &_middle {
             margin: 4rem auto;
-        }    
+        }
+
         &__title {
             font-size: 1.3rem;
             line-height: 1.9rem;
             margin-bottom: 1.3rem;
-        }    
+        }
+
         &__btn {
             padding: 0.87rem 0;
             width: 8.5rem;
             margin-top: 2.33rem;
         }
     }
+
     .group-dots {
         margin-left: 35%;
     }
 
     .footer {
         padding: 1rem 0;
+
         &__image {
             margin-bottom: 1rem;
+
             img {
                 height: 6rem;
             }
@@ -468,9 +523,11 @@
 
     .social-link {
         margin-top: -9.5rem;
+
         >span {
             margin-bottom: 1.4rem;
         }
+
         >img {
             width: 2rem;
         }
@@ -487,6 +544,20 @@
         min-height: 25rem;
     }
 
+    .about-us {
+        background-position: top 1rem right -9rem;
+        background-size: 40rem;
+
+        &__image {
+            margin-top: 2rem;
+        }
+
+        &__card {
+            width: 45%;
+            padding: 2rem 1.2rem;
+        }
+    }
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -494,6 +565,7 @@
         background: url(../image/menu-bg.svg) no-repeat top center / contain;
         background-color: $white;
     }
+
     .first-screen {
         &__btn {
             margin: 3.3rem auto 0;
@@ -501,10 +573,12 @@
         }
     }
 
-    .section-middle { 
+    .section-middle {
         background-size: 80rem;
-        .group-card { 
-            margin-top: 2rem;           
+
+        .group-card {
+            margin-top: 2rem;
+
             &::before {
                 background: url(../image/index/bg-section-middle-small-mob.svg) no-repeat center right;
                 background-size: contain;
@@ -512,12 +586,14 @@
                 left: 0;
                 right: 0;
             }
+
             .col-12 {
                 &:last-child {
                     margin-top: 0;
                 }
             }
         }
+
         .mt-120 {
             margin-top: 3rem;
         }
@@ -527,6 +603,7 @@
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
+
         &__img {
             width: 4.6rem;
             margin: 0 1.7rem 0 0;
@@ -539,20 +616,21 @@
 
     .section-last {
         padding: 5.4rem 0 3.06rem;
+
         &::before {
-           display: none;
+            display: none;
         }
-    
+
         &::after {
             width: 10.6rem;
             top: 8.2rem;
             left: 30%;
         }
-    
+
         &__title {
             margin-bottom: 4rem;
         }
-    
+
         &__btn {
             width: 290px;
             display: block;
@@ -563,14 +641,17 @@
     .group-dots {
         margin-left: 0;
     }
+
     .footer {
         font-size: 0.8rem;
     }
 
     .social-link {
         margin-top: 0;
+
         >span {
             display: none;
+
             &:first-child {
                 display: block;
             }
@@ -583,16 +664,19 @@
         padding: 2rem 0 4.6rem;
         background-position: bottom -8rem left -14rem;
         background-size: 60rem;
+
         &__text {
             &_top {
-                >p{
+                >p {
                     width: 100%;
                 }
+
                 >a {
                     display: none;
                 }
             }
         }
+
         &__card {
             margin-bottom: 5.3rem;
         }
@@ -602,8 +686,9 @@
         p {
             margin-bottom: 1.5rem;
         }
+
         >a {
-            margin:5.6rem auto 0;
+            margin: 5.6rem auto 0;
             width: 290px;
             display: block;
         }
@@ -615,10 +700,12 @@
         padding: 1.06rem 1rem 2rem;
         margin-bottom: 1rem;
         text-align: left;
+
         &:nth-of-type(2n) {
             margin-top: 0;
             margin-bottom: 1rem;
         }
+
         &__header {
             display: flex;
             align-items: center;
@@ -626,20 +713,77 @@
             border-bottom: 1px solid $border-solid;
             margin-bottom: 2rem;
         }
+
         &__img {
             width: 4.6rem;
             min-width: 4.6rem;
             margin: 0 1.6rem 0 0;
         }
+
         &__title {
             line-height: normal;
         }
+    }
+
+    .about-us {
+        padding: 2rem 0 4.6rem;
+        background-position: top 5rem right -10rem;
+        background-size: 34rem;
+
+        &__card {
+            width: 100%;
+            padding: 1.7rem 1rem;
+            justify-content: flex-start;
+            text-align: left;
+            margin-right: 0;
+        }
+    }
+
+    .FAQ {
+        padding: 2rem 0 4rem;
+        &__title {
+            margin-bottom: 2.2rem;
+        }
+    }
+    
+    .accordion {
+        &__item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            >article {
+                margin-top: 1rem;
+                >p {
+                    width: 100%;
+                    margin-bottom: 0.5rem;
+                }
+                >ul {
+                    width: 100%;
+                }
+            }
+        }
+        &__title {
+            &::after {
+                width: 2rem;
+                height: 2rem;
+                right: -0.5rem;
+                top: -0.5rem;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .about-us {
+        background-position: top 15rem right -7rem;
+        background-size: 24rem;
     }
 }
 
 @media only screen and (max-height: 570px) {
     .menu {
         overflow-y: auto;
+
         &__content {
             &.open {
                 padding-top: 3rem;
@@ -702,6 +846,7 @@
     html {
         font-size: 20px;
     }
+
     .publishers,
     .advertisers,
     .whyClaroAds {
@@ -716,6 +861,7 @@
     .first-screen {
         background: url(../image/index/bg.svg) no-repeat bottom center / cover;
     }
+
     .svg-container {
         display: none;
     }
