@@ -36,19 +36,20 @@ $(document).ready(function () {
   });
 
   // menu on screen 1200
-  $('.menu__btn').on('click', function() {
-		$(this).toggleClass('open');
+  $('.menu__btn').on('click', function () {
+    $(this).toggleClass('open');
     $('.menu__content').toggleClass('open');
-    $('.header').toggleClass('open');    
+    $('.header').toggleClass('open');
     $('body').toggleClass('overflow');
   });
-  
+
+  // accordion
   $('.accordion>li>div').click(function () {
     $(this).toggleClass('open');
     $(this).next('article').slideToggle();
     $(this).closest('li').siblings('li').find('.accordion__title').removeClass('open');
     $(this).closest('li').siblings('li').find('article').slideUp();
-});
+  });
 
 
 
