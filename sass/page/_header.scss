@@ -33,7 +33,7 @@
             position: fixed;
             right: 0;
             left: 0;
-            top: 5.5rem;
+            top: 4.8rem;
             background-color: $color-title;
             text-align: center;
             display: none;
@@ -132,7 +132,7 @@
     z-index: 100;
     background-color: $white;
     @include transition (0.5s);
-    @include transform(translate(0, -120%));
+    @include transform(translate(0, -150%));
     .logo {
         background: url(../image/logo-blue.svg) no-repeat center center / 100% 100%;
     }

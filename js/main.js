@@ -98,5 +98,26 @@ $(document).ready(function () {
   };
 
 
+  // animate circle 
+  $(window).scroll(function(){
+    $('circle').each(function(){
+      if(isScrolledIntoView($(this))){
+        $(this).addClass('animate');
+      }
+      else{
+        $(this).removeClass('animate');
+      }
+    });
+  });
+  
+  function isScrolledIntoView(elem){
+      let element = $(elem);
+      let screen = $(window);
+      let docViewTop = screen.scrollTop();
+      let docViewBottom = docViewTop + screen.height();
+      let elemTop = element.offset().top;
+      let elemBottom = elemTop + element.height();
+      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
 
 });
