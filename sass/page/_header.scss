@@ -63,11 +63,17 @@
 .group-btn {
     border: 2px solid $light-blue;
     @include border-radius(40px);
-    padding: 0.7rem 1.1rem;
+    padding: 0.3rem 0.3rem;
     margin-left: 3.5rem;
     >a {
         color: $light-blue;
         text-transform: uppercase;
+        @include border-radius(40px);
+        padding: 0.4rem 0.8rem;
+        &:hover {
+            background-color: $light-blue;
+            color: $white;
+        }
     }
     >span {
         width: 5px;
@@ -105,6 +111,10 @@
         border: 2px solid $white;
         >a {
             color: $white;
+            &:hover {
+                background-color: $white;
+                color: $light-blue;
+            }
         }
         >span {
             background-color: $white;
@@ -142,6 +152,10 @@
         border: 2px solid $light-blue;
         >a {
             color: $light-blue;
+            &:hover {
+                background-color: $light-blue;
+                color: $white;
+            }
         }
         >span {
             background-color: $light-blue;

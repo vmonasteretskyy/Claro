@@ -64,15 +64,9 @@ $(document).ready(function () {
     self.val() == "" ? self.prev().removeClass('active') : "";
   });
 
-  // $('.form-btn').click(function(){
-  //   if(inputsStyleLabel.val() == "") {
-  //     $('.form-group').addClass('error');
-  //   }
-  // });
 
-
-
-  (function () {
+  if ($("#curve").length === 1) { animateScroll()};
+  function animateScroll() {
     // Variables
     let $curve = document.getElementById("curve");
     let last_known_scroll_position = 0;
@@ -101,6 +95,6 @@ $(document).ready(function () {
       }
       ticking = true;
     });
-  })();
+  };
 
 });

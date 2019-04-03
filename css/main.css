@@ -271,12 +271,22 @@ h1, h2, h3, h4, h5, h6 {
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
-  padding: 0.7rem 1.1rem;
+  padding: 0.3rem 0.3rem;
   margin-left: 3.5rem;
 }
 .group-btn > a {
   color: #3BB9FF;
   text-transform: uppercase;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  padding: 0.4rem 0.8rem;
+}
+.group-btn > a:hover {
+  background-color: #3BB9FF;
+  color: #fff;
 }
 .group-btn > span {
   width: 5px;
@@ -315,6 +325,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .white-menu .group-btn > a {
   color: #fff;
+}
+.white-menu .group-btn > a:hover {
+  background-color: #fff;
+  color: #3BB9FF;
 }
 .white-menu .group-btn > span {
   background-color: #fff;
@@ -358,6 +372,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .fixed .group-btn > a {
   color: #3BB9FF;
+}
+.fixed .group-btn > a:hover {
+  background-color: #3BB9FF;
+  color: #fff;
 }
 .fixed .group-btn > span {
   background-color: #3BB9FF;
@@ -798,6 +816,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 3.9rem 0 5.6rem;
   background: url(../image/bg-contact-us.svg) no-repeat top right;
   background-size: 66rem;
+  position: relative;
 }
 .contact-us p {
   margin-bottom: 1rem;
@@ -805,6 +824,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .contact-us__form {
   padding: 3.25rem 7rem 3.5rem;
+  position: relative;
 }
 .contact-us__form h4 {
   font-family: "Poppins", sans-serif;
@@ -818,6 +838,29 @@ h1, h2, h3, h4, h5, h6 {
   width: 80%;
   margin: 0 auto 2.5rem;
   font-weight: 400;
+}
+.contact-us__form .dots {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+}
+.contact-us__form .dots__item {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: block;
+  margin-bottom: 2rem;
+}
+.contact-us .group-dots {
+  position: absolute;
+  left: 17.6%;
+  bottom: 3rem;
+  margin: 0;
 }
 
 .form-group {
@@ -1168,6 +1211,10 @@ h1, h2, h3, h4, h5, h6 {
   .header.open .group-btn > a {
     color: #fff;
   }
+  .header.open .group-btn > a:hover {
+    background-color: #fff;
+    color: #3BB9FF;
+  }
   .header.open .group-btn > span {
     background-color: #fff;
   }
@@ -1320,10 +1367,7 @@ h1, h2, h3, h4, h5, h6 {
             order: -1;
   }
   .group-btn > a {
-    color: #3BB9FF;
-  }
-  .group-btn > span {
-    background-color: #3BB9FF;
+    padding: 0.3rem 1.5rem;
   }
 
   .white-menu .menu__btn::before, .white-menu .menu__btn::after {
@@ -1537,6 +1581,9 @@ h1, h2, h3, h4, h5, h6 {
   .contact-us__form > p {
     width: 100%;
   }
+  .contact-us .group-dots {
+    bottom: 12rem;
+  }
 }
 @media only screen and (max-width: 767.8px) {
   .btn-border-white, .btn-blue, .btn-white {
@@ -1675,6 +1722,12 @@ h1, h2, h3, h4, h5, h6 {
   .contact-us__form > p {
     width: 90%;
     margin: 0 auto 2rem;
+  }
+  .contact-us__form .dots {
+    display: none;
+  }
+  .contact-us .group-dots {
+    display: none;
   }
 
   .form-group input,
@@ -1928,6 +1981,10 @@ h1, h2, h3, h4, h5, h6 {
     background-position: bottom -12rem left -28.4rem;
     background-size: 105rem;
   }
+
+  .contact-us .group-dots {
+    left: 33%;
+  }
 }
 @media only screen and (min-width: 1480px) {
   .container {
@@ -1941,6 +1998,10 @@ h1, h2, h3, h4, h5, h6 {
   .section-middle {
     background-position: bottom -12rem left -28.4rem;
     background-size: 105rem;
+  }
+
+  .contact-us .group-dots {
+    left: 34%;
   }
 }
 @media only screen and (min-width: 1701px) {
@@ -1956,6 +2017,10 @@ h1, h2, h3, h4, h5, h6 {
   .advertisers__text,
   .whyClaroAds__text {
     width: 80%;
+  }
+
+  .contact-us .group-dots {
+    left: 37.3%;
   }
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

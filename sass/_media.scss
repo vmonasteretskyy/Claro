@@ -16,19 +16,19 @@
         line-height: 1.38rem;
         text-transform: uppercase;
         z-index: 100;
-
         &.open {
             .logo {
                 background: url(../image/logo-white.svg) no-repeat center center / 100% 100%;
             }
-
             .group-btn {
                 border: 2px solid $white;
-
                 >a {
                     color: $white;
+                    &:hover {
+                        background-color: $white;
+                        color: $light-blue;
+                    }
                 }
-
                 >span {
                     background-color: $white;
                 }
@@ -43,7 +43,6 @@
         max-height: 28rem;
         overflow-y: auto;
         padding: 2rem 1.4rem 1.8rem;
-
         &__btn {
             position: relative;
             width: 2.4rem;
@@ -166,13 +165,8 @@
         margin: 2.2rem 0 1.8rem;
         justify-content: center;
         order: -1;
-
         >a {
-            color: $light-blue;
-        }
-
-        >span {
-            background-color: $light-blue;
+            padding: 0.3rem 1.5rem;
         }
     }
 
@@ -439,6 +433,9 @@
                 width: 100%;
             }
         }
+        .group-dots {
+            bottom: 12rem;
+        }
     }
 }
 
@@ -593,6 +590,12 @@
                 width: 90%;
                 margin: 0 auto 2rem;
             }
+            .dots {
+                display: none;
+            }
+        }
+        .group-dots {
+            display: none;
         }
     }
     
@@ -875,6 +878,12 @@
         background-position: bottom -12rem left -28.4rem;
         background-size: 105rem;
     }
+
+    .contact-us {
+        .group-dots {
+            left: 33%;
+        }
+    }
 }
 
 @media only screen and (min-width: 1480px) {
@@ -889,6 +898,11 @@
     .section-middle {
         background-position: bottom -12rem left -28.4rem;
         background-size: 105rem;
+    }
+    .contact-us {
+        .group-dots {
+            left: 34%;
+        }
     }
 }
 
@@ -906,6 +920,11 @@
     .whyClaroAds {
         &__text {
             width: 80%;
+        }
+    }
+    .contact-us {
+        .group-dots {
+            left: 37.3%;
         }
     }
 }
