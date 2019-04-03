@@ -1,0 +1,162 @@
+.terms-service {
+    padding: 3rem 0 7rem;
+    background: url(../image/bg-terms-service.svg) no-repeat bottom 20rem center;
+    .title-section {
+        width: 90%;
+    }
+    &__text {
+        width: 87%;
+        margin-bottom: 2.2rem;
+    }
+    &__box {
+        width: 100%;
+        position: relative;
+        margin-bottom: 1rem;
+        &::before {
+            content: '';
+            height: 100%;
+            border-left: 2px solid $light-gray;
+            position: absolute;
+            top: 2rem;
+            left: 1.75rem;
+        }
+    }
+    &__header {
+        align-items: center;
+        color: $light-blue;
+        margin: 1rem 0;
+    }
+    &__title {
+        font-size: 1.3rem;
+        margin: 0 0 0 3.2rem;
+    }
+    &__number {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $second-fond;
+        font-weight: 700;
+        font-size: 1.1rem;
+        width: 3.65rem;
+        height: 3.65rem;
+        background-color: $white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+        @include border-radius(50%);
+        &::after {
+            content: '#';
+            font-size: 4rem;
+            font-family: $font-family;
+            color: $light-gray;
+            line-height: normal;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            @include transform(translate(-40%,-36%));
+        }
+    }
+    &__body {
+        margin-left: 7rem;
+        >ul {
+            >li {
+                padding-left: 1.5rem;
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 0.65rem;
+                    height: 0.2rem;
+                    position: absolute;
+                    left: 0;
+                    top: 0.7rem;
+                    background-color: $color-text;
+                }
+                >ul {
+                    font-size: 0.9rem;
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+        li {
+            margin-bottom: 1.5rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -2.6rem;
+        margin-left: -2.6rem;
+        width: 5.2rem;
+        height: 5.2rem;
+        background: transparent;
+        @include border-radius(50%);
+        @include transform(rotate(-145deg));
+        .circle {
+            fill: transparent;
+            stroke: $light-blue;
+            stroke-width: 2;
+            stroke-dasharray: 0 100;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+#circle1 {
+    animation-name: fillup1;
+}
+#circle2 {
+    animation-name: fillup2;
+}
+#circle3 {
+    animation-name: fillup3;
+}
+#circle4 {
+    animation-name: fillup4;
+}
+#circle5 {
+    animation-name: fillup5;
+}
+#circle6 {
+    animation-name: fillup6;
+}
+
+  
+  
+  
+  @keyframes fillup1 {
+    to { 
+      stroke-dasharray: 15 100;
+    }
+  }
+  @keyframes fillup2 {
+    to { 
+      stroke-dasharray: 34 100;
+    }
+  }
+  @keyframes fillup3 {
+    to { 
+      stroke-dasharray: 50 100;
+    }
+  }
+  @keyframes fillup4 {
+    to { 
+      stroke-dasharray: 65 100;
+    }
+  }
+  @keyframes fillup5 {
+    to { 
+      stroke-dasharray: 80 100;
+    }
+  }
+  @keyframes fillup6 {
+    to { 
+      stroke-dasharray: 110 100; 
+    }
+  }
+  
