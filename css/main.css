@@ -1105,15 +1105,17 @@ h1, h2, h3, h4, h5, h6 {
   fill: transparent;
   stroke: #3BB9FF;
   stroke-width: 2;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
   stroke-dasharray: 0 100;
-}
-.terms-service__circle .circle.animate {
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-name: fillUp5;
+          animation-name: fillUp5;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
 }
 .terms-service .dots {
   position: absolute;
@@ -1218,12 +1220,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @-webkit-keyframes fillUp5 {
   to {
-    stroke-dasharray: 80 100;
+    stroke-dasharray: 80;
   }
 }
 @keyframes fillUp5 {
   to {
-    stroke-dasharray: 80 100;
+    stroke-dasharray: 80;
   }
 }
 @-webkit-keyframes fillUp6 {
