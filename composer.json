@@ -1,0 +1,12 @@
+{
+    "name": "vitaliy/claro",
+    "authors": [
+        {
+            "name": "Vitaliy",
+            "email": "vitaliy@gmail.com"
+        }
+    ],
+    "require": {
+        "google/recaptcha": "^1.2"
+    }
+}

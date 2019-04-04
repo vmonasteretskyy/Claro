@@ -68,12 +68,48 @@ $(document).ready(function () {
   });
 
 
-  $('.send-message').click(function (e) {
+  $('.contact-us-form-send').submit(function (e) {
+    let ths = $(this);
     e.preventDefault();
     let messageLength = $('#messageText').val().length;
     if (messageLength === 0) {
       $('#messageText').parent().addClass('error');
+      return;
     }
+
+    
+   
+    let serialize = $(ths).serialize();
+
+
+    $.ajax({
+      url: "/mail.php",
+      dataType: "JSON",
+      type: "POST",
+      data: serialize,
+      beforeSend: function(){
+        $(ths).find('.send-message').html('<span class="loader"></span>');
+      },
+      success: function(data){
+        console.log(data);
+        $(ths).find('.send-message').html('Send');
+        if(data.type == 0){
+          $('.result-ajax').html('<span style="color: red;">'+data.message+'</span>');
+        } 
+        if(data.type == 200){
+          $(ths).html('<span style="color: green;">'+data.message+'</span>');
+        }
+      },
+      error: function(errr){
+        $(ths).find('.send-message').html('Send');
+
+        console.log(errr);
+      }
+    });
+
+
+
+
   });
 
   $('#messageText').focus(function () {
@@ -133,3 +169,13 @@ $(document).ready(function () {
   }
 
 });
+
+
+
+
+
+
+
+  var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+  };
