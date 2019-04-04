@@ -1,21 +1,17 @@
 .terms-service {
     padding: 3rem 0 7rem;
-    background: url(../image/bg-terms-service.svg) no-repeat bottom 20rem center;
-
+    background: url(../image/bg-terms-service.svg) no-repeat bottom 20rem center / contain;
     .title-section {
         width: 90%;
     }
-
     &__text {
         width: 87%;
         margin-bottom: 2.2rem;
     }
-
     &__box {
         width: 100%;
         position: relative;
         margin-bottom: 1rem;
-
         &::before {
             content: '';
             height: 100%;
@@ -24,19 +20,21 @@
             top: 2rem;
             left: 1.75rem;
         }
+        &:last-child{
+            &::before {
+                display: none;
+            }
+        }
     }
-
     &__header {
         align-items: center;
         color: $light-blue;
         margin: 1rem 0;
     }
-
     &__title {
         font-size: 1.3rem;
         margin: 0 0 0 3.2rem;
     }
-
     &__number {
         position: relative;
         display: flex;
@@ -50,7 +48,6 @@
         background-color: $white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
         @include border-radius(50%);
-
         &::after {
             content: '#';
             font-size: 4rem;
@@ -64,15 +61,12 @@
             @include transform(translate(-40%, -36%));
         }
     }
-
     &__body {
         margin-left: 7rem;
-
         >ul {
             >li {
                 padding-left: 1.5rem;
                 position: relative;
-
                 &::before {
                     content: '';
                     width: 0.65rem;
@@ -82,23 +76,19 @@
                     top: 0.7rem;
                     background-color: $color-text;
                 }
-
                 >ul {
                     font-size: 0.9rem;
                     margin-top: 1.5rem;
                 }
             }
         }
-
         li {
             margin-bottom: 1.5rem;
-
             &:last-child {
                 margin-bottom: 0;
             }
         }
     }
-
     &__circle {
         position: absolute;
         top: 50%;
@@ -110,17 +100,35 @@
         background: transparent;
         @include border-radius(50%);
         @include transform(rotate(-145deg));
-
         .circle {
             fill: transparent;
             stroke: $light-blue;
             stroke-width: 2;
             stroke-dasharray: 0 100;
-
             &.animate {
                 animation-duration: 4s;
                 animation-iteration-count: 1;
                 animation-fill-mode: forwards;
+            }
+        }
+    }
+    .dots {
+        position: absolute;
+        top: 28rem;
+        right: 0;
+        width: 10.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        &__item {
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: $light-blue;
+            @include border-radius(50%);
+            display: block;
+            margin-bottom: 2rem;
+            margin-right: 2rem;
+            &:nth-child(5n) {
+                margin-right: 0;
             }
         }
     }

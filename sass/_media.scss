@@ -16,19 +16,24 @@
         line-height: 1.38rem;
         text-transform: uppercase;
         z-index: 100;
+
         &.open {
             .logo {
                 background: url(../image/logo-white.svg) no-repeat center center / 100% 100%;
             }
+
             .group-btn {
                 border: 2px solid $white;
+
                 >a {
                     color: $white;
+
                     &:hover {
                         background-color: $white;
                         color: $light-blue;
                     }
                 }
+
                 >span {
                     background-color: $white;
                 }
@@ -43,6 +48,7 @@
         max-height: 28rem;
         overflow-y: auto;
         padding: 2rem 1.4rem 1.8rem;
+
         &__btn {
             position: relative;
             width: 2.4rem;
@@ -165,6 +171,7 @@
         margin: 2.2rem 0 1.8rem;
         justify-content: center;
         order: -1;
+
         >a {
             padding: 0.3rem 1.5rem;
         }
@@ -371,9 +378,16 @@
 
     .contact-us {
         background-size: 60rem;
+
         &__form {
             padding: 3rem 5rem 3rem;
         }
+    }
+
+    .terms-service {
+        padding: 3rem 0 5rem;
+        background-size: contain;
+        background-position: center center;
     }
 }
 
@@ -427,16 +441,20 @@
 
     .contact-us {
         background-size: 44rem;
+
         &__form {
             padding: 2rem 2rem 2.5rem;
+
             >p {
                 width: 100%;
             }
         }
+
         .group-dots {
             bottom: 12rem;
         }
     }
+
 }
 
 @media only screen and (max-width: 767.8px) {
@@ -576,36 +594,84 @@
         padding: 2rem 0 4rem;
         background: url(../image/bg-contact-us-320.svg) no-repeat top right;
         background-size: 30rem;
+
         p {
             margin-bottom: 1rem;
         }
+
         &__form {
             margin-top: 3rem;
             padding: 1.7rem 1rem 3rem;
+
             h4 {
                 font-size: 1rem;
                 margin-bottom: 1.3rem;
             }
+
             >p {
                 width: 90%;
                 margin: 0 auto 2rem;
             }
+
             .dots {
                 display: none;
             }
         }
+
         .group-dots {
             display: none;
         }
     }
-    
+
     .form-group {
+
         input,
         textarea {
             height: 2.1rem;
         }
     }
-    
+
+    .terms-service {
+        padding: 2rem 0 5rem;
+        .title-section {
+            width: 100%;
+        }
+        &__text {
+            width: 100%;
+        }
+        &__box {
+            &::before{
+                left: 2.4rem;
+            }
+        }
+        &__title {
+            font-size: 1.2rem;
+            margin: 0 0 0 1.4rem;
+        }
+        &__number {
+            font-size: 1.5rem;
+            width: 4.8rem;
+            min-width: 4.8rem;
+            height: 4.8rem;
+            min-height: 4.8rem;
+            &::after {
+                font-size: 5rem;
+            }
+        }
+        &__body {
+            margin-left: 5.8rem;
+        }
+        &__circle {
+            margin-top: -3.1rem;
+            margin-left: -3.1rem;
+            width: 6.2rem;
+            height: 6.2rem;
+        }
+        .dots {
+            display: none;
+        }
+    }
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -789,26 +855,31 @@
 
     .FAQ {
         padding-bottom: 4rem;
+
         &__title {
             margin: 2.2rem 0;
         }
     }
-    
+
     .accordion {
         &__item {
             padding: 1rem;
             margin-bottom: 1rem;
+
             >article {
                 margin-top: 1rem;
+
                 >p {
                     width: 100%;
                     margin-bottom: 0.5rem;
                 }
+
                 >ul {
                     width: 100%;
                 }
             }
         }
+
         &__title {
             &::after {
                 width: 2rem;
@@ -824,6 +895,69 @@
         background-position: top 5rem right;
         background-size: 27rem;
     }
+
+    .terms-service {
+        padding: 2rem 0 0;
+        background-image: url(../image/bg-terms-service-320.svg);
+        background-position: top 26rem right;
+        .col-12.col-lg-11.col-xl-10 {
+            padding: 0;
+        }
+        &__box {
+            margin-bottom: 0;
+            padding: 1rem 1rem 2rem;
+            &::before {
+                display: none;
+            }
+            &:last-child {
+                padding-bottom: 3rem;
+            }
+            &:nth-of-type(even) {
+                background: linear-gradient(97.44deg, #3BB9FF 1.78%, #77CEFE 98.53%);
+                position: relative;
+                z-index: 1;
+                .terms-service__header {
+                    color: $white;
+                }
+                .terms-service__body {
+                    color: $white;
+                    >ul>li {
+                        &::before {
+                            background-color: $white;
+                        }
+                    }
+                }
+                .terms-service__circle {
+                    .circle {
+                        stroke: $white;
+                    }
+                }
+            }
+        }
+        &__header {
+            padding: 0 1.2rem 1rem;
+            border-bottom: 1px solid $border-solid;
+        }
+        &__number {
+            color: $light-blue;
+        }
+        &__body {
+            margin-left: 0;
+            >ul {
+                >li {
+                    padding-left: 0;
+                    &::before {
+                        left: 0;
+                        top: -1rem;
+                    }
+                }
+            }
+            li {
+                margin-bottom: 0;
+                margin-top: 2.4rem;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -831,6 +965,7 @@
         background-position: top 15rem right -7rem;
         background-size: 24rem;
     }
+
     .contact-us {
         background-position: top 9rem right;
         background-size: 22rem;
@@ -840,7 +975,6 @@
 @media only screen and (max-height: 570px) {
     .menu {
         overflow-y: auto;
-
         &__content {
             &.open {
                 padding-top: 3rem;
@@ -899,6 +1033,7 @@
         background-position: bottom -12rem left -28.4rem;
         background-size: 105rem;
     }
+
     .contact-us {
         .group-dots {
             left: 30%;
@@ -922,6 +1057,7 @@
             width: 80%;
         }
     }
+
     .contact-us {
         .group-dots {
             left: 37.3%;
@@ -929,12 +1065,10 @@
     }
 }
 
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .first-screen {
         background: url(../image/index/bg.svg) no-repeat bottom center / cover;
     }
-
     .svg-container {
         display: none;
     }

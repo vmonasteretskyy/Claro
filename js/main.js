@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     if (currentPosition < heightHeader) {
       $('.header').removeClass('visible fixed');
-      $('main').css('padding-top', "0");
+      $('main').css('padding-top', '0');
     }
 
     this.previousPosition = currentPosition;
@@ -31,9 +31,10 @@ $(document).ready(function () {
     $('.menu__items>span').next('ul').slideUp();
   });
 
-  $(".menu__items>span").click(function (e) {
+  $('.menu__items>span').click(function (e) {
     e.stopPropagation();
   });
+
 
   // menu on screen 1200
   $('.menu__btn').on('click', function () {
@@ -43,6 +44,7 @@ $(document).ready(function () {
     $('body').toggleClass('overflow');
   });
 
+
   // accordion
   $('.accordion>li>div').click(function () {
     $(this).toggleClass('open');
@@ -51,41 +53,51 @@ $(document).ready(function () {
     $(this).closest('li').siblings('li').find('article').slideUp();
   });
 
-  //style input
-  let inputsStyleLabel = $(".form-group input, .form-group textarea");
 
+  //input style
+  let inputsStyleLabel = $('.form-group input');
   inputsStyleLabel.on('focus', function () {
-    let self = $(this);
-    self.prev().addClass('active');
+    $(this).prev().addClass('active');
   });
 
   inputsStyleLabel.on('focusout', function () {
-        let self = $(this);
-    self.val() == "" ? self.prev().removeClass('active') : "";
+    if($(this).val() == " ") $(this).prev().removeClass('active');
   });
 
 
-  if ($("#curve").length === 1) { animateScroll()};
+  $('.send-message').click(function (e) {
+    e.preventDefault();
+    let messageLength = $('#messageText').val().length;
+    if (messageLength === 0) {
+      $('#messageText').parent().addClass('error');
+    }
+  });
+
+  $('#messageText').focus(function () {
+    $('#messageText').parent().removeClass('error');
+  })
+
+
+  if ($('#curve').length === 1) animateScroll();
+
   function animateScroll() {
-    // Variables
-    let $curve = document.getElementById("curve");
     let last_known_scroll_position = 0;
     let defaultCurveValue = 380;
-    let curveRate = 7;
+    let curveRate = 6;
     let ticking = false;
     let curveValue;
-    // Handle the functionality
+    
     function scrollEvent(scrollPos) {
       if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
         curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
-        $curve.setAttribute(
+        $('#curve')[0].setAttribute(
           "d",
           "M 800 380 Q 380 " + curveValue + " 0 380 L 0 0 L 800 0 L 800 380 Z"
         );
       }
     }
-    // Scroll Listener
-    window.addEventListener("scroll", function (e) {
+   
+    window.addEventListener('scroll', function () {
       last_known_scroll_position = window.scrollY;
       if (!ticking) {
         window.requestAnimationFrame(function () {
@@ -99,25 +111,25 @@ $(document).ready(function () {
 
 
   // animate circle 
-  $(window).scroll(function(){
-    $('circle').each(function(){
-      if(isScrolledIntoView($(this))){
+  $(window).scroll(function () {
+    $('circle').each(function () {
+      if (isScrolledIntoView($(this))) {
         $(this).addClass('animate');
       }
-      else{
-        $(this).removeClass('animate');
-      }
+      // else{
+      //   $(this).removeClass('animate');
+      // }
     });
   });
-  
-  function isScrolledIntoView(elem){
-      let element = $(elem);
-      let screen = $(window);
-      let docViewTop = screen.scrollTop();
-      let docViewBottom = docViewTop + screen.height();
-      let elemTop = element.offset().top;
-      let elemBottom = elemTop + element.height();
-      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+
+  function isScrolledIntoView(elem) {
+    let element = $(elem);
+    let screen = $(window);
+    let docViewTop = screen.scrollTop();
+    let docViewBottom = docViewTop + screen.height();
+    let elemTop = element.offset().top;
+    let elemBottom = elemTop + element.height();
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   }
 
 });
