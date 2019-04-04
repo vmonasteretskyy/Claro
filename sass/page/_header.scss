@@ -132,6 +132,7 @@
     z-index: 100;
     background-color: $white;
     @include transition (0.5s);
+    @include animate(move .4s ease);
     // @include transform(translate(0, -150%));
     .logo {
         background: url(../image/logo-blue.svg) no-repeat center center / 100% 100%;
@@ -163,6 +164,15 @@
     }
 }
 
-.visible {
-    @include transform(translate(0, 0));
+// .visible {
+//     @include transform(translate(0, 0));
+// }
+
+@keyframes move {
+    from {
+        @include transform(translateY(-100%));
+      }
+      to { 
+        @include transform(translateY(0));        
+      }  
 }
