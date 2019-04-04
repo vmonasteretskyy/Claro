@@ -132,7 +132,7 @@
     z-index: 100;
     background-color: $white;
     @include transition (0.5s);
-    @include transform(translate(0, -150%));
+    // @include transform(translate(0, -150%));
     .logo {
         background: url(../image/logo-blue.svg) no-repeat center center / 100% 100%;
     }

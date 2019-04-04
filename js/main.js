@@ -8,18 +8,21 @@ $(document).ready(function () {
     if (currentPosition >= heightHeader) {
       $('.header').addClass('fixed').removeClass('visible');
       $('main').css('padding-top', heightHeader);
-    }
-
-    if (currentPosition < this.previousPosition) {
-      $('header').addClass('visible');
-    }
-
-    if (currentPosition < heightHeader) {
-      $('.header').removeClass('visible fixed');
+    }else {
+      $('.header').removeClass('fixed');
       $('main').css('padding-top', '0');
     }
 
-    this.previousPosition = currentPosition;
+    // if (currentPosition < this.previousPosition) {
+    //   $('header').addClass('visible');
+    // }
+
+    // if (currentPosition < heightHeader) {
+    //   $('.header').removeClass('visible fixed');
+    //   $('main').css('padding-top', '0');
+    // }
+
+    // this.previousPosition = currentPosition;
   });
 
 

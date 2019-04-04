@@ -351,11 +351,6 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
-  transform: translate(0, -150%);
-  -webkit-transform: translate(0, -150%);
-  -moz-transform: translate(0, -150%);
-  -ms-transform: translate(0, -150%);
-  -o-transform: translate(0, -150%);
 }
 .fixed .logo {
   background: url(../image/logo-blue.svg) no-repeat center center/100% 100%;
